@@ -1,0 +1,23 @@
+{
+	"criteria": {
+		"speed_up": {
+			"trigger": "minecraft:using_item",
+			"conditions": {
+				"item": {
+					"components": {
+						"minecraft:custom_data": {
+							"fcyball": {
+								"type": "ball_speed_ctrl",
+								"variant": "speed_up"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"parent": "fcyball:root",
+	"rewards": {
+		"function": "fcyball:balloon/speed/up"
+	}
+}

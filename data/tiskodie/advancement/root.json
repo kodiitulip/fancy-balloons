@@ -1,0 +1,22 @@
+{
+	"display": {
+		"title": "TisKodie's Datapacks",
+		"description": "",
+		"icon": {
+			"id": "minecraft:player_head",
+			"components": {
+				"minecraft:profile": {
+					"name": "TisKodie"
+				}
+			}
+		},
+		"background": "minecraft:textures/block/yellow_concrete.png",
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:tick"
+		}
+	}
+}

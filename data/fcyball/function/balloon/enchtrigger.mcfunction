@@ -1,0 +1,1 @@
+execute on vehicle if entity @s[tag=fcyball.seat.interaction] on vehicle if entity @s[tag=fcyball.balloon.seat] on vehicle if entity @s[tag=fcyball.balloon] run function fcyball:balloon/tick
