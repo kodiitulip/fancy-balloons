@@ -1,0 +1,129 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bundle",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:bundle_contents": [
+									{
+										"id": "minecraft:amethyst_shard",
+										"components": {
+											"minecraft:item_name": "\"Balloon Control\"",
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_speed_ctrl",
+													"variant": "rotation_lock"
+												}
+											},
+											"minecraft:food": {
+												"nutrition": 0,
+												"saturation": 0.0,
+												"can_always_eat": true,
+												"eat_seconds": 999999
+											},
+											"minecraft:lore": [
+												"{\"text\": \"Use the item to lock/unlock the Balloon's rotation\",\"color\": \"#721234\",\"italic\": true}"
+											]
+										}
+									},
+									{
+										"id": "minecraft:lime_dye",
+										"components": {
+											"minecraft:item_name": "\"Balloon Speed Up\"",
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_speed_ctrl",
+													"variant": "speed_up"
+												}
+											},
+											"minecraft:food": {
+												"nutrition": 0,
+												"saturation": 0.0,
+												"can_always_eat": true,
+												"eat_seconds": 999999
+											},
+											"minecraft:lore": [
+												"{\"text\": \"Use this item to increase the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
+											]
+										}
+									},
+									{
+										"id": "minecraft:red_dye",
+										"components": {
+											"minecraft:item_name": "\"Balloon Slow Down\"",
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_speed_ctrl",
+													"variant": "slow_down"
+												}
+											},
+											"minecraft:food": {
+												"nutrition": 0,
+												"saturation": 0.0,
+												"can_always_eat": true,
+												"eat_seconds": 999999
+											},
+											"minecraft:lore": [
+												"{\"text\": \"Use this item to decrease the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
+											]
+										}
+									},
+									{
+										"id": "minecraft:yellow_dye",
+										"components": {
+											"minecraft:item_name": "\"Balloon Ascend\"",
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_height_ctrl",
+													"variant": "up"
+												}
+											},
+											"minecraft:food": {
+												"nutrition": 0,
+												"saturation": 0.0,
+												"can_always_eat": true,
+												"eat_seconds": 999999
+											},
+											"minecraft:lore": [
+												"{\"text\": \"Use this item to ascend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
+											]
+										}
+									},
+									{
+										"id": "minecraft:blue_dye",
+										"components": {
+											"minecraft:item_name": "\"Balloon Decend\"",
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_height_ctrl",
+													"variant": "down"
+												}
+											},
+											"minecraft:food": {
+												"nutrition": 0,
+												"saturation": 0.0,
+												"can_always_eat": true,
+												"eat_seconds": 999999
+											},
+											"minecraft:lore": [
+												"{\"text\": \"Use this item to decend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
+											]
+										}
+									}
+								],
+								"minecraft:custom_name": "\"Balloon and Balloon Controlers\""
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

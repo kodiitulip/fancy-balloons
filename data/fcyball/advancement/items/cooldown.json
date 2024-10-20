@@ -6,6 +6,6 @@
 	},
 	"parent": "fcyball:root",
 	"rewards": {
-		"function": "fcyball:balloon/speed/cooldown"
+		"function": "fcyball:balloon/controls/cooldown"
 	}
 }

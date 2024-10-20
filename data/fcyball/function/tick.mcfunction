@@ -1,0 +1,1 @@
+execute as @a if predicate fcyball:player_in_balloon run function fcyball:balloon/enchtrigger

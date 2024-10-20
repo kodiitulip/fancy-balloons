@@ -18,6 +18,6 @@
 	},
 	"parent": "fcyball:root",
 	"rewards": {
-		"function": "fcyball:balloon/speed/up"
+		"function": "fcyball:balloon/controls/speed_up"
 	}
 }

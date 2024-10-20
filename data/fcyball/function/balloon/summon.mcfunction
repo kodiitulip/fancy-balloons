@@ -6,6 +6,4 @@ tag @n[type=minecraft:block_display,tag=fcyball.seat,distance=..2] add fcyball.b
 
 ride @n[type=minecraft:block_display,tag=fcyball.seat,distance=..2] mount @n[type=minecraft:block_display,distance=..2,tag=fcyball.balloon,tag=fcyball.balloon.spawning]
 
-scoreboard players set @n[tag=fcyball.balloon.spawning,distance=..4] fcyball.speed 0
-
 tag @n[tag=fcyball.balloon.spawning,distance=..4] remove fcyball.balloon.spawning

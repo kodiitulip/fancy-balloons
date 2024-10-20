@@ -7,8 +7,8 @@
 					"components": {
 						"minecraft:custom_data": {
 							"fcyball": {
-								"type": "ball_speed_ctrl",
-								"variant": "slow_down"
+								"type": "ball_height_ctrl",
+								"variant": "up"
 							}
 						}
 					}
@@ -18,6 +18,6 @@
 	},
 	"parent": "fcyball:root",
 	"rewards": {
-		"function": "fcyball:balloon/controls/speed_down"
+		"function": "fcyball:balloon/controls/height_up"
 	}
 }
