@@ -1,0 +1,28 @@
+{
+	"criteria": {
+		"spawn": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"components": {
+								"minecraft:custom_data": {
+									"fcyball": {
+										"type": "ball_spawner",
+										"variant": "red"
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"parent": "fcyball:root",
+	"rewards": {
+		"function": "fcyball:spawner/trigger"
+	}
+}

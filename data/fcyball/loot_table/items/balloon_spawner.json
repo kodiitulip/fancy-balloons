@@ -1,0 +1,32 @@
+{
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "item",
+					"name": "minecraft:bat_spawn_egg",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_name": "\"Balloon\"",
+								"minecraft:entity_data": {
+									"id": "minecraft:marker",
+									"Tags": ["fcyball.balloon.spawner"]
+								},
+								"minecraft:custom_data": {
+									"fcyball": {
+										"type": "ball_spawner",
+										"variant": "red"
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}

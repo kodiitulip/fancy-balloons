@@ -116,6 +116,24 @@
 												"{\"text\": \"Use this item to decend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
 											]
 										}
+									},
+									{
+										"id": "minecraft:bat_spawn_egg",
+										"components": {
+											"minecraft:item_name": "\"Balloon\"",
+											"minecraft:entity_data": {
+												"id": "minecraft:marker",
+												"Tags": [
+													"fcyball.balloon.spawner"
+												]
+											},
+											"minecraft:custom_data": {
+												"fcyball": {
+													"type": "ball_spawner",
+													"variant": "red"
+												}
+											}
+										}
 									}
 								],
 								"minecraft:custom_name": "\"Balloon and Balloon Controlers\""

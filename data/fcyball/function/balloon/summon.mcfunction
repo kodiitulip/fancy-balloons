@@ -7,3 +7,5 @@ tag @n[type=minecraft:block_display,tag=fcyball.seat,distance=..2] add fcyball.b
 ride @n[type=minecraft:block_display,tag=fcyball.seat,distance=..2] mount @n[type=minecraft:block_display,distance=..2,tag=fcyball.balloon,tag=fcyball.balloon.spawning]
 
 tag @n[tag=fcyball.balloon.spawning,distance=..4] remove fcyball.balloon.spawning
+
+execute if entity @s[tag=fcyball.balloon.spawner] run kill
