@@ -5,7 +5,7 @@
 		"vehicle": {
 			"nbt": "{Tags:[\"fcyball.seat.interaction\"]}",
 			"vehicle": {
-				"nbt": "{Tags:[\"fcyball.balloon.seat\"]}"
+				"nbt": "{Tags:[\"fcyball.balloon\"]}"
 			}
 		}
 	}

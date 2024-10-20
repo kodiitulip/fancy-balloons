@@ -1,0 +1,47 @@
+{
+	"textures": {
+		"0": "animated_java:item/fcyballdisplay/balloon"
+	},
+	"display": {
+		"head": {
+			"rotation": [0, 180, 0]
+		}
+	},
+	"elements": [
+		{
+			"from": [7, -13, 7],
+			"to": [9, 8, 9],
+			"rotation": {
+				"angle": 0,
+				"axis": "y",
+				"origin": [8, -13, 8]
+			},
+			"faces": {
+				"north": {
+					"uv": [5.625, 9, 5.875, 11.625],
+					"texture": "#0"
+				},
+				"east": {
+					"uv": [10.75, 12.5, 11, 15.125],
+					"texture": "#0"
+				},
+				"south": {
+					"uv": [11, 12.5, 11.25, 15.125],
+					"texture": "#0"
+				},
+				"west": {
+					"uv": [11.25, 12.5, 11.5, 15.125],
+					"texture": "#0"
+				},
+				"up": {
+					"uv": [13.375, 7.625, 13.125, 7.375],
+					"texture": "#0"
+				},
+				"down": {
+					"uv": [13.375, 7.625, 13.125, 7.875],
+					"texture": "#0"
+				}
+			}
+		}
+	]
+}

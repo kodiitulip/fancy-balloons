@@ -30,3 +30,7 @@
     |fence|carpet|fence|balloon|
     |plank|plank|plank| |
 -   fixed up a couple detections on items, now whenever a player puts down a balloon and they don't have the controls, they will receive all the control items
+
+# CHANGES - 20/10/2024 - 19:20 - prototype-0.0.5
+
+-   Animated Java Model!! Now balloons have an animated java model with a wayy better visual, a little swaying animation, and all functions were uptaded to fit the new model. This model is stil subject to change.
