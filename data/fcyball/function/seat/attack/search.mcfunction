@@ -1,4 +1,5 @@
 execute store success score .bool fcyball.cooldown on attacker if entity @s[tag=fcyball.seat.attacker]
+execute store success score .ctrl fcyball.cooldown on attacker if entity @s[tag=fcyball.balloon.controler]
 
 execute if score .bool fcyball.cooldown matches 1 on vehicle if entity @s[tag=fcyball.balloon.seat] at @s on passengers on attacker if entity @s[gamemode=!creative] run loot spawn ~ ~ ~ loot fcyball:items/balloon_spawner
 

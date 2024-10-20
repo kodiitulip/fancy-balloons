@@ -9,7 +9,8 @@
 							"fcyball": {
 								"type": "ball_height_ctrl",
 								"variant": "up"
-							}
+							},
+							"id": "controller"
 						}
 					}
 				}

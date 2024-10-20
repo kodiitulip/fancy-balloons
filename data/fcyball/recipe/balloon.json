@@ -1,0 +1,35 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": ["WWW", "FCF", "PPP"],
+	"key": {
+		"W": {
+			"tag": "minecraft:wool"
+		},
+		"F": {
+			"tag": "minecraft:wooden_fences"
+		},
+		"C": {
+			"tag": "minecraft:wool_carpets"
+		},
+		"P": {
+			"tag": "minecraft:planks"
+		}
+	},
+	"category": "misc",
+	"result": {
+		"id": "minecraft:bat_spawn_egg",
+		"components": {
+			"minecraft:item_name": "\"Balloon\"",
+			"minecraft:entity_data": {
+				"id": "minecraft:marker",
+				"Tags": ["fcyball.balloon.spawner"]
+			},
+			"minecraft:custom_data": {
+				"fcyball": {
+					"type": "ball_spawner",
+					"variant": "red"
+				}
+			}
+		}
+	}
+}

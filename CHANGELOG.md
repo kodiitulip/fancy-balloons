@@ -20,3 +20,13 @@
 
 -   Fixed balloons will now be able to travel horizontally and vertically
 -   Added block checks to avoid balloons going inside blocks
+
+# CHANGES - 20/10/2024 - 04:30 - prototype-0.0.5
+
+-   Added balloon spawner recipe
+    | | recipe | | result |
+    |:-:|:-:|:-:|:-:|
+    |wool|wool|wool| |
+    |fence|carpet|fence|balloon|
+    |plank|plank|plank| |
+-   fixed up a couple detections on items, now whenever a player puts down a balloon and they don't have the controls, they will receive all the control items

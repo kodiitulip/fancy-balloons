@@ -9,7 +9,8 @@
 							"fcyball": {
 								"type": "ball_speed_ctrl",
 								"variant": "speed_up"
-							}
+							},
+							"id": "controller"
 						}
 					}
 				}
