@@ -15,3 +15,8 @@
 -   Added spawn item for balloons
 -   Fixed atacking balloons will no longer remove other balloons nearby
 -   Added spawning the spawn item for the balloon when destroing it
+
+# CHANGES - 20/10/2024 - 03:22 - prototype-0.0.4
+
+-   Fixed balloons will now be able to travel horizontally and vertically
+-   Added block checks to avoid balloons going inside blocks
