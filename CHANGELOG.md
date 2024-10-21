@@ -31,11 +31,11 @@
     |plank|plank|plank| |
 -   fixed up a couple detections on items, now whenever a player puts down a balloon and they don't have the controls, they will receive all the control items
 
-# CHANGES - 20/10/2024 - 19:20 - prototype-0.0.5
+# CHANGES - 20/10/2024 - 19:20 - prototype-0.0.6
 
 -   Animated Java Model!! Now balloons have an animated java model with a wayy better visual, a little swaying animation, and all functions were uptaded to fit the new model. This model is stil subject to change.
 
-# CHANGES - 20/10/2024 - 21:30 - prototype-0.0.5
+# CHANGES - 20/10/2024 - 21:30 - prototype-0.0.7
 
 -   Fixed some errors with some advancements
 -   I think we ready for publishing :3
