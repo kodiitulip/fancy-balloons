@@ -4,13 +4,12 @@
 			"trigger": "minecraft:using_item",
 			"conditions": {
 				"item": {
-					"components": {
+					"predicates": {
 						"minecraft:custom_data": {
 							"fcyball": {
 								"type": "ball_speed_ctrl",
 								"variant": "speed_up"
-							},
-							"id": "controller"
+							}
 						}
 					}
 				}

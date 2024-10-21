@@ -7,11 +7,10 @@
 					{
 						"condition": "minecraft:match_tool",
 						"predicate": {
-							"components": {
+							"predicates": {
 								"minecraft:custom_data": {
 									"fcyball": {
-										"type": "ball_spawner",
-										"variant": "red"
+										"type": "ball_spawner"
 									}
 								}
 							}
