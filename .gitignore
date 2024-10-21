@@ -1,2 +1,5 @@
 .vscode/
 spyglass.json
+*.ajmeta
+.blockbench/
+.export/
