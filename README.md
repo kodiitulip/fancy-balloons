@@ -32,9 +32,14 @@ Now if you interact with the balloons with dyes in hand they will be colored
 | green | ![green](/readme-assets/green.png) |  green dye   |
 | blue  |  ![blue](/readme-assets/blue.png)  |   blue dye   |
 
-> Keep in mind that if you break a balloon the color will reset. I still havent found a way to cnage this without having an item for every color.
+> Keep in mind that if you break a balloon, it's color will reset. I still haven't found a way to change this without having an item for every color.
 
 ### New Item Model
 
 The spawner item for the balloon no longer looks like a bat spawn egg!<br/>
 ![item](/readme-assets/icon.png)
+
+> NOTES!
+> The datapack version file works as both a datapack and resourcepack.
+> Put the same file on both folders <br />
+> The mod version works globaly just like any other mod

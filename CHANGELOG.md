@@ -48,6 +48,4 @@
     -   the right panel indicates vertical speed
     -   the left panel indicates horizontal speed
 -   Recipe changes!!
-    ![recipe](/readme-assets/recipe.png)
--   New item model! The balloon spawner item no longer looks like a bat spawn egg <br/>
-    ![icon](/readme-assets/icon.png)
+-   New item model! The balloon spawner item no longer looks like a bat spawn egg
