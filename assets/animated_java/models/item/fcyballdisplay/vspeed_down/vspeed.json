@@ -1,0 +1,6 @@
+{
+	"parent": "animated_java:item/fcyballdisplay/default/vspeed",
+	"textures": {
+		"4": "animated_java:item/fcyballdisplay/v_speed_down"
+	}
+}

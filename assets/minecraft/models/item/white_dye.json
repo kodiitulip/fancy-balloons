@@ -20,22 +20,100 @@
 			"predicate": {
 				"custom_model_data": 3
 			},
-			"model": "animated_java:item/fcyballdisplay/default/balloon"
+			"model": "animated_java:item/fcyballdisplay/default/hspeed"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 4
 			},
-			"model": "animated_java:item/fcyballdisplay/default/rope_left"
+			"model": "animated_java:item/fcyballdisplay/default/vspeed"
 		},
 		{
 			"predicate": {
 				"custom_model_data": 5
 			},
+			"model": "animated_java:item/fcyballdisplay/default/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 6
+			},
+			"model": "animated_java:item/fcyballdisplay/default/rope_left"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 7
+			},
 			"model": "animated_java:item/fcyballdisplay/default/rope_right"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 8
+			},
+			"model": "animated_java:item/fcyballdisplay/red/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 9
+			},
+			"model": "animated_java:item/fcyballdisplay/green/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 10
+			},
+			"model": "animated_java:item/fcyballdisplay/blue/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 11
+			},
+			"model": "animated_java:item/fcyballdisplay/vspeed_up/vspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 12
+			},
+			"model": "animated_java:item/fcyballdisplay/vspeed_down/vspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 13
+			},
+			"model": "animated_java:item/fcyballdisplay/vspeed_stop/vspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 14
+			},
+			"model": "animated_java:item/fcyballdisplay/hspeed_fow1/hspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 15
+			},
+			"model": "animated_java:item/fcyballdisplay/hspeed_fow2/hspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 16
+			},
+			"model": "animated_java:item/fcyballdisplay/hspeed_bac1/hspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 17
+			},
+			"model": "animated_java:item/fcyballdisplay/hspeed_bac2/hspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 18
+			},
+			"model": "animated_java:item/fcyballdisplay/hspeed_stop/hspeed"
 		}
 	],
 	"animated_java": {
-		"fcyballdisplay": [1, 2, 3, 4, 5]
+		"fcyballdisplay": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 	}
 }

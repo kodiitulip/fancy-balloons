@@ -39,3 +39,15 @@
 
 -   Fixed some errors with some advancements
 -   I think we ready for publishing :3
+
+# CHANGES - 22/10/2024 - 17:10 - prototype-0.0.8
+
+-   Added colors to the balloons! simply interact with a dye in hands and the collor will apply (as of now there are only red, green, and blue, more ar on the works)
+-   Now can only ride the balloon if interected with empty hands
+-   There is now a little panel in the balloons model that shows little arrows indicating the balloon's speed
+    -   the right panel indicates vertical speed
+    -   the left panel indicates horizontal speed
+-   Recipe changes!!
+    ![recipe](/readme-assets/recipe.png)
+-   New item model! The balloon spawner item no longer looks like a bat spawn egg <br/>
+    ![icon](/readme-assets/icon.png)

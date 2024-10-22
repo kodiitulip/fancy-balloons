@@ -2,4 +2,4 @@
 spyglass.json
 *.ajmeta
 .blockbench/
-.export/
+*.export*

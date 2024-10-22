@@ -1,0 +1,6 @@
+{
+	"parent": "animated_java:item/fcyballdisplay/default/balloon",
+	"textures": {
+		"0": "animated_java:item/fcyballdisplay/balloon_green"
+	}
+}

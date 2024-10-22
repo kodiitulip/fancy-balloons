@@ -21,7 +21,8 @@
 										"type": "ball_spawner",
 										"variant": "red"
 									}
-								}
+								},
+								"minecraft:custom_model_data": 10001
 							}
 						}
 					]

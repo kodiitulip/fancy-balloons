@@ -3,11 +3,35 @@
 		"files": [
 			"assets/animated_java/models/empty.json",
 			"assets/animated_java/textures/item/fcyballdisplay/balloon.png",
+			"assets/animated_java/textures/item/fcyballdisplay/balloon_red.png",
+			"assets/animated_java/textures/item/fcyballdisplay/balloon_green.png",
+			"assets/animated_java/textures/item/fcyballdisplay/balloon_blue.png",
+			"assets/animated_java/textures/item/fcyballdisplay/v_speed_stop.png",
+			"assets/animated_java/textures/item/fcyballdisplay/v_speed_up.png",
+			"assets/animated_java/textures/item/fcyballdisplay/v_speed_down.png",
+			"assets/animated_java/textures/item/fcyballdisplay/h_speed_bac1.png",
+			"assets/animated_java/textures/item/fcyballdisplay/h_speed_bac2.png",
+			"assets/animated_java/textures/item/fcyballdisplay/h_speed_fow1.png",
+			"assets/animated_java/textures/item/fcyballdisplay/h_speed_fow2.png",
+			"assets/animated_java/textures/item/fcyballdisplay/h_speed_stop.png",
 			"assets/animated_java/textures/item/transparent.png",
 			"assets/animated_java/models/item/fcyballdisplay/default/boat.json",
+			"assets/animated_java/models/item/fcyballdisplay/default/hspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/default/vspeed.json",
 			"assets/animated_java/models/item/fcyballdisplay/default/balloon.json",
 			"assets/animated_java/models/item/fcyballdisplay/default/rope_left.json",
-			"assets/animated_java/models/item/fcyballdisplay/default/rope_right.json"
+			"assets/animated_java/models/item/fcyballdisplay/default/rope_right.json",
+			"assets/animated_java/models/item/fcyballdisplay/red/balloon.json",
+			"assets/animated_java/models/item/fcyballdisplay/green/balloon.json",
+			"assets/animated_java/models/item/fcyballdisplay/blue/balloon.json",
+			"assets/animated_java/models/item/fcyballdisplay/vspeed_up/vspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/vspeed_down/vspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/vspeed_stop/vspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/hspeed_fow1/hspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/hspeed_fow2/hspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/hspeed_bac1/hspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/hspeed_bac2/hspeed.json",
+			"assets/animated_java/models/item/fcyballdisplay/hspeed_stop/hspeed.json"
 		]
 	}
 }

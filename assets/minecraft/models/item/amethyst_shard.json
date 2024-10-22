@@ -1,0 +1,32 @@
+{
+	"parent": "item/generated",
+	"textures": {
+		"layer0": "minecraft:item/amethyst_shard"
+	},
+	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 10002
+			},
+			"model": "minecraft:item/lime_dye"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 10003
+			},
+			"model": "minecraft:item/red_dye"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 10004
+			},
+			"model": "minecraft:item/yellow_dye"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 10005
+			},
+			"model": "minecraft:item/blue_dye"
+		}
+	]
+}

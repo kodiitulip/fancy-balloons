@@ -1,15 +1,15 @@
 {
 	"type": "minecraft:crafting_shaped",
-	"pattern": ["WWW", "FCF", "PPP"],
+	"pattern": [" W ", " L ", "PIP"],
 	"key": {
 		"W": {
 			"tag": "minecraft:wool"
 		},
-		"F": {
-			"tag": "minecraft:wooden_fences"
+		"L": {
+			"item": "minecraft:lead"
 		},
-		"C": {
-			"tag": "minecraft:wool_carpets"
+		"I": {
+			"item": "minecraft:iron_ingot"
 		},
 		"P": {
 			"tag": "minecraft:planks"
@@ -29,7 +29,8 @@
 					"type": "ball_spawner",
 					"variant": "red"
 				}
-			}
+			},
+			"minecraft:custom_model_data": 10001
 		}
 	}
 }

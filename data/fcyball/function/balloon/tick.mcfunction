@@ -5,4 +5,6 @@ scoreboard players add @s fcyball.rot.lock 0
 execute at @s run function fcyball:balloon/move
 
 execute if score @s fcyball.rot.lock matches 0 run function fcyball:balloon/rotate
-# execute if score @s fcyball.rot.lock matches 0 run particle minecraft:flame ~ ~1 ~ 0.1 0.1 0.1 0 1
+
+# update the monitor
+function fcyball:balloon/uptade_monitor

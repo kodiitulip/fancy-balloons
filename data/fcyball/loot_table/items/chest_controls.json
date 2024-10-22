@@ -27,7 +27,8 @@
 								},
 								"minecraft:lore": [
 									"{\"text\": \"Use the item to lock/unlock the Balloon's rotation\",\"color\": \"#721234\",\"italic\": true}"
-								]
+								],
+								"minecraft:custom_model_data": 10001
 							}
 						}
 					]
@@ -39,7 +40,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:lime_dye",
+					"name": "minecraft:amethyst_shard",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -60,7 +61,8 @@
 								},
 								"minecraft:lore": [
 									"{\"text\": \"Use this item to increase the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
-								]
+								],
+								"minecraft:custom_model_data": 10002
 							}
 						}
 					]
@@ -72,7 +74,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:red_dye",
+					"name": "minecraft:amethyst_shard",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -93,7 +95,8 @@
 								},
 								"minecraft:lore": [
 									"{\"text\": \"Use this item to decrease the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
-								]
+								],
+								"minecraft:custom_model_data": 10003
 							}
 						}
 					]
@@ -105,7 +108,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:yellow_dye",
+					"name": "minecraft:amethyst_shard",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -126,7 +129,8 @@
 								},
 								"minecraft:lore": [
 									"{\"text\": \"Use this item to ascend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
-								]
+								],
+								"minecraft:custom_model_data": 10004
 							}
 						}
 					]
@@ -138,7 +142,7 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
-					"name": "minecraft:blue_dye",
+					"name": "minecraft:amethyst_shard",
 					"functions": [
 						{
 							"function": "minecraft:set_components",
@@ -159,7 +163,8 @@
 								},
 								"minecraft:lore": [
 									"{\"text\": \"Use this item to decend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
-								]
+								],
+								"minecraft:custom_model_data": 10005
 							}
 						}
 					]
