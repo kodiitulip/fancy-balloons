@@ -11,10 +11,7 @@
 							"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"
 						}
 					}
-				],
-				"item": {
-					"items": ["minecraft:air"]
-				}
+				]
 			}
 		}
 	},

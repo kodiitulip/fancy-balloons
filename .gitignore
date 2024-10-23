@@ -1,5 +1,3 @@
 .vscode/
 spyglass.json
-*.ajmeta
-.blockbench/
-*.export*
+fancy-balloons-*.zip

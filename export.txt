@@ -1,0 +1,7 @@
+assets/
+CHANGELOG.md
+data/
+LICENSE.txt
+pack.mcmeta
+pack.png
+README.md

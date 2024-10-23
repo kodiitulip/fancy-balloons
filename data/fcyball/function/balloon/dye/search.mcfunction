@@ -1,6 +1,10 @@
+scoreboard players add .bool fcyball.cooldown 0
 execute store success score .bool fcyball.cooldown on target if entity @s[tag=fcyball.seat.interactor]
 
-scoreboard players add .color fcyball.cooldown 0
+execute if score .bool fcyball.cooldown matches 0 run data remove entity @s interaction
+execute if score .bool fcyball.cooldown matches 0 run return run scoreboard players reset .bool fcyball.cooldown
+
+execute if score .bool fcyball.cooldown matches 1 run scoreboard players add .color fcyball.cooldown 0
 
 execute if score .bool fcyball.cooldown matches 1 on target \
 	if items entity @s weapon.* minecraft:water_bucket run \
