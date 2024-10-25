@@ -59,3 +59,25 @@
     -   Z: patch version, backward compatible (usually bug fixes)
     -   A: pre-release version (this datapack it's still on alpha so will basicaly only be alpha for now)
 -   Balloons no longer need empty hands to be seated on
+
+# CHANGES - 25/10/2024 - 13:40 - v0.1.1-alpha
+
+-   Color Update (again...) - color patch if you will
+-   New colors include:
+    -   black
+    -   brown
+    -   cyan
+    -   light blue
+    -   light gray
+    -   lime
+    -   magenta
+    -   orange
+    -   pink
+    -   white
+    -   yellow
+    -   gray
+    -   purple
+-   Recipes for the controllers! Now controllers have stone cutter recipes, instead of simply giving them to the player for free.
+-   Changed the controller items to be iron nuggets, and since you use iron nuggets to craft the controllers, you can convert a controller into another!
+    -   You can technically still use the old controller items, but they will no longer have the difrent texture and also wont be able to be used for crafting other controllers.
+    -   BE CAREFUl! Since the item controllers are just iron ingots with custom data, minecraft will still see them as iron nuggets for recipes.

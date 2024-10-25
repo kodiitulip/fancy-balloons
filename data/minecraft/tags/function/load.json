@@ -1,1 +1,7 @@
-{ "values": ["fcyball:load", "animated_java:global/on_load"] }
+{
+	"values": [
+		"animated_java:global/on_load",
+		"animated_java:global/internal/gu/load",
+		"fcyball:load"
+	]
+}

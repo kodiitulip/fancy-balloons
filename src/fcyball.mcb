@@ -89,12 +89,7 @@ dir seat {
 						}
 					],
 					"item": {
-						"items": [
-							"minecraft:water_bucket",
-							"minecraft:red_dye",
-							"minecraft:green_dye",
-							"minecraft:blue_dye"
-						]
+						"items": "#fcyball:dyes"
 					}
 				}
 			}
@@ -148,7 +143,7 @@ dir items {
 				"entries": [
 					{
 						"type": "minecraft:item",
-						"name": "minecraft:amethyst_shard",
+						"name": "minecraft:iron_nugget",
 						"functions": [
 							{
 								"function": "minecraft:set_components",
@@ -182,7 +177,7 @@ dir items {
 				"entries": [
 					{
 						"type": "minecraft:item",
-						"name": "minecraft:amethyst_shard",
+						"name": "minecraft:iron_nugget",
 						"functions": [
 							{
 								"function": "minecraft:set_components",
@@ -216,7 +211,7 @@ dir items {
 				"entries": [
 					{
 						"type": "minecraft:item",
-						"name": "minecraft:amethyst_shard",
+						"name": "minecraft:iron_nugget",
 						"functions": [
 							{
 								"function": "minecraft:set_components",
@@ -250,7 +245,7 @@ dir items {
 				"entries": [
 					{
 						"type": "minecraft:item",
-						"name": "minecraft:amethyst_shard",
+						"name": "minecraft:iron_nugget",
 						"functions": [
 							{
 								"function": "minecraft:set_components",
@@ -284,7 +279,7 @@ dir items {
 				"entries": [
 					{
 						"type": "minecraft:item",
-						"name": "minecraft:amethyst_shard",
+						"name": "minecraft:iron_nugget",
 						"functions": [
 							{
 								"function": "minecraft:set_components",
@@ -507,8 +502,158 @@ recipe balloon {
 	}
 }
 
-function load minecraft:load{
-    scoreboard objectives add mcb.internal dummy
+recipe balloon_controller {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+	"item": "minecraft:iron_nugget"
+  },
+  "result": {
+	"id": "minecraft:iron_nugget",
+	"components": {
+	  "minecraft:item_name": "\"Balloon Control\"",
+	  "minecraft:custom_data": {
+			"fcyball": {
+				"type": "ball_speed_ctrl",
+				"variant": "rotation_lock"
+			},
+			"id": "controller"
+		},
+	  "minecraft:food": {
+		"nutrition": 0,
+		"saturation": 0,
+		"can_always_eat": true,
+		"eat_seconds": 999999
+	  },
+	  "minecraft:lore": [
+		"{\"text\": \"Use the item to lock/unlock the Balloon's rotation\",\"color\": \"#721234\",\"italic\": true}"
+	  ],
+	  "minecraft:custom_model_data": 10001
+	}
+  }
+}
+
+recipe balloon_speed_up {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+	"item": "minecraft:iron_nugget"
+  },
+  "result": {
+	"id": "minecraft:iron_nugget",
+	"components": {
+	  "minecraft:item_name": "\"Balloon Speed Up\"",
+	  "minecraft:custom_data": {
+			"fcyball": {
+				"type": "ball_speed_ctrl",
+				"variant": "speed_up"
+			},
+			"id": "controller"
+		},
+	  "minecraft:food": {
+		"nutrition": 0,
+		"saturation": 0,
+		"can_always_eat": true,
+		"eat_seconds": 999999
+	  },
+	  "minecraft:lore": [
+		"{\"text\": \"Use this item to increase the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
+	  ],
+	  "minecraft:custom_model_data": 10002
+	}
+  }
+}
+
+recipe balloon_speed_down {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+	"item": "minecraft:iron_nugget"
+  },
+  "result": {
+	"id": "minecraft:iron_nugget",
+	"components": {
+		"minecraft:item_name": "\"Balloon Slow Down\"",
+		"minecraft:custom_data": {
+			"fcyball": {
+				"type": "ball_speed_ctrl",
+				"variant": "slow_down"
+			},
+			"id": "controller"
+		},
+		"minecraft:food": {
+			"nutrition": 0,
+			"saturation": 0.0,
+			"can_always_eat": true,
+			"eat_seconds": 999999
+		},
+		"minecraft:lore": [
+			"{\"text\": \"Use this item to decrease the Balloon's speed\",\"color\": \"#721234\",\"italic\": true}"
+		],
+		"minecraft:custom_model_data": 10003
+	}
+  }
+}
+
+recipe balloon_height_up {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+	"item": "minecraft:iron_nugget"
+  },
+  "result": {
+	"id": "minecraft:iron_nugget",
+	"components": {
+		"minecraft:item_name": "\"Balloon Ascend\"",
+		"minecraft:custom_data": {
+			"fcyball": {
+				"type": "ball_height_ctrl",
+				"variant": "up"
+			},
+			"id": "controller"
+		},
+		"minecraft:food": {
+			"nutrition": 0,
+			"saturation": 0.0,
+			"can_always_eat": true,
+			"eat_seconds": 999999
+		},
+		"minecraft:lore": [
+			"{\"text\": \"Use this item to ascend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
+		],
+		"minecraft:custom_model_data": 10004
+	}
+  }
+}
+
+recipe balloon_height_down {
+  "type": "minecraft:stonecutting",
+  "ingredient": {
+	"item": "minecraft:iron_nugget"
+  },
+  "result": {
+	"id": "minecraft:iron_nugget",
+	"components": {
+		"minecraft:item_name": "\"Balloon Decend\"",
+		"minecraft:custom_data": {
+			"fcyball": {
+				"type": "ball_height_ctrl",
+				"variant": "down"
+			},
+			"id": "controller"
+		},
+		"minecraft:food": {
+			"nutrition": 0,
+			"saturation": 0.0,
+			"can_always_eat": true,
+			"eat_seconds": 999999
+		},
+		"minecraft:lore": [
+			"{\"text\": \"Use this item to decend the Balloon\",\"color\": \"#721234\",\"italic\": true}"
+		],
+		"minecraft:custom_model_data": 10005
+	}
+  }
+}
+
+function load {
+	scoreboard objectives add mcb.internal dummy
 
 	scoreboard objectives add fcyball.height dummy
 	scoreboard objectives add fcyball.speed dummy
@@ -520,7 +665,7 @@ function load minecraft:load{
 	title TisKodie actionbar ["",{"text":"[fcyball]", "color": "#1b9e2e" }," has loaded!"]
 }
 
-function tick minecraft:tick {
+function tick {
 	execute as @a if predicate fcyball:player_in_balloon run {
 		execute store result score .tgtrotation fcyball.rot.x run data get entity @s Rotation[0] 100
 
@@ -619,10 +764,6 @@ dir balloon {
 	function spawner {
 		advancement revoke @s only fcyball:items/spawner
 
-		execute unless items entity @s inventory.* *[minecraft:custom_data~{"id": "controller"}] \
-			unless items entity @s hotbar.* *[minecraft:custom_data~{"id": "controller"}] run \
-				loot give @s loot fcyball:items/chest_controls
-
 		execute at @n[distance=..7,tag=fcyball.balloon.spawner,type=minecraft:marker] \
 			rotated as @s rotated ~ 0 align xyz positioned ~0.5 ~0.5 ~0.5 run \
 				function ./summon
@@ -646,29 +787,61 @@ dir balloon {
 			}
 
 			scoreboard players add .color fcyball.cooldown 0
-
-			execute on target if items entity @s weapon.* minecraft:water_bucket run \
-					scoreboard players set .color fcyball.cooldown 0
-
-			execute on target if items entity @s weapon.* minecraft:red_dye run \
-					scoreboard players set .color fcyball.cooldown 1
-
-			execute on target if items entity @s weapon.* minecraft:green_dye run \
-					scoreboard players set .color fcyball.cooldown 2
-
-			execute on target if items entity @s weapon.* minecraft:blue_dye run \
-					scoreboard players set .color fcyball.cooldown 3
+			
+			<%%
+				const dyes = [
+					"minecraft:water_bucket",
+					"minecraft:white_dye",
+					"minecraft:red_dye",
+					"minecraft:blue_dye",
+					"minecraft:cyan_dye",
+					"minecraft:gray_dye",
+					"minecraft:lime_dye",
+					"minecraft:pink_dye",
+					"minecraft:black_dye",
+					"minecraft:brown_dye",
+					"minecraft:green_dye",
+					"minecraft:orange_dye",
+					"minecraft:purple_dye",
+					"minecraft:yellow_dye",
+					"minecraft:magenta_dye",
+					"minecraft:light_blue_dye",
+					"minecraft:light_gray_dye",
+				];
+				for (let i = 0; i < dyes.length; i++) {
+					emit(`execute on target if items entity @s weapon.* ${dyes[i]} run \
+						scoreboard players set .color fcyball.cooldown ${i}`)
+				}
+			%%>
 
 			data remove entity @s interaction
 
-			execute if score .color fcyball.cooldown matches 0 on vehicle run \
-				function animated_java:fcyballdisplay/variants/default/apply
-			execute if score .color fcyball.cooldown matches 1 on vehicle run \
-				function animated_java:fcyballdisplay/variants/red/apply
-			execute if score .color fcyball.cooldown matches 2 on vehicle run \
-				function animated_java:fcyballdisplay/variants/green/apply
-			execute if score .color fcyball.cooldown matches 3 on vehicle run \
-				function animated_java:fcyballdisplay/variants/blue/apply
+			<%%
+				const variants = [
+					"default",
+					"white",
+					"red",
+					"blue",
+					"cyan",
+					"gray",
+					"lime",
+					"pink",
+					"black",
+					"brown",
+					"green",
+					"orange",
+					"purple",
+					"yellow",
+					"magenta",
+					"light_blue",
+					"light_gray",
+				];
+				for (let i = 0; i < variants.length; i++) {
+					emit(`execute if score .color fcyball.cooldown matches ${i} on vehicle run \
+							function animated_java:fcyballdisplay/variants/${variants[i]}/apply`)
+				}
+			%%>
+
 
 			scoreboard players reset .bool fcyball.cooldown
 			scoreboard players reset .color fcyball.cooldown
@@ -851,4 +1024,24 @@ dir seat {
 
 		tag @s remove fcyball.seat.attacker
 	}
+}
+
+tag item dyes {
+	minecraft:water_bucket
+	minecraft:white_dye
+	minecraft:red_dye
+	minecraft:blue_dye
+	minecraft:cyan_dye
+	minecraft:gray_dye
+	minecraft:lime_dye
+	minecraft:pink_dye
+	minecraft:black_dye
+	minecraft:brown_dye
+	minecraft:green_dye
+	minecraft:orange_dye
+	minecraft:purple_dye
+	minecraft:yellow_dye
+	minecraft:magenta_dye
+	minecraft:light_blue_dye
+	minecraft:light_gray_dye	
 }

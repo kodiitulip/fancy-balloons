@@ -1,9 +1,15 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "minecraft:item/amethyst_shard"
+		"layer0": "minecraft:item/iron_nugget"
 	},
 	"overrides": [
+		{
+			"predicate": {
+				"custom_model_data": 10001
+			},
+			"model": "minecraft:item/amethyst_shard"
+		},
 		{
 			"predicate": {
 				"custom_model_data": 10002

@@ -1,1 +1,1 @@
-{ "values": ["fcyball:tick", "animated_java:global/on_tick"] }
+{ "values": ["animated_java:global/on_tick", "fcyball:tick"] }

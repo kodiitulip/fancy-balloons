@@ -111,9 +111,87 @@
 				"custom_model_data": 18
 			},
 			"model": "animated_java:item/fcyballdisplay/hspeed_stop/hspeed"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 19
+			},
+			"model": "animated_java:item/fcyballdisplay/black/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 20
+			},
+			"model": "animated_java:item/fcyballdisplay/brown/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 21
+			},
+			"model": "animated_java:item/fcyballdisplay/cyan/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 22
+			},
+			"model": "animated_java:item/fcyballdisplay/light_blue/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 23
+			},
+			"model": "animated_java:item/fcyballdisplay/light_gray/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 24
+			},
+			"model": "animated_java:item/fcyballdisplay/lime/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 25
+			},
+			"model": "animated_java:item/fcyballdisplay/magenta/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 26
+			},
+			"model": "animated_java:item/fcyballdisplay/orange/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 27
+			},
+			"model": "animated_java:item/fcyballdisplay/pink/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 28
+			},
+			"model": "animated_java:item/fcyballdisplay/white/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 29
+			},
+			"model": "animated_java:item/fcyballdisplay/yellow/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 30
+			},
+			"model": "animated_java:item/fcyballdisplay/gray/balloon"
+		},
+		{
+			"predicate": {
+				"custom_model_data": 31
+			},
+			"model": "animated_java:item/fcyballdisplay/purple/balloon"
 		}
 	],
 	"animated_java": {
-		"fcyballdisplay": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+		"fcyballdisplay": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]
 	}
 }
