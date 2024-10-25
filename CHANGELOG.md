@@ -49,3 +49,13 @@
     -   the left panel indicates horizontal speed
 -   Recipe changes!!
 -   New item model! The balloon spawner item no longer looks like a bat spawn egg
+
+# CHANGES - 25/10/2024 - 00:10 - v0.1.0-alpha
+
+-   Upgrade and fixing the datapack to work with mcbuild, allowing for easier developing!
+-   Now I'll start use a more proper semantic versioning so format like vX.Y.Z-A:
+    -   X: major version, backward incompatible
+    -   Y: minor version, backward compatible (unless said so)
+    -   Z: patch version, backward compatible (usually bug fixes)
+    -   A: pre-release version (this datapack it's still on alpha so will basicaly only be alpha for now)
+-   Balloons no longer need empty hands to be seated on
