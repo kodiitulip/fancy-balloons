@@ -1,11 +1,1 @@
-{
-	"criteria": {
-		"cooldown": {
-			"trigger": "minecraft:tick"
-		}
-	},
-	"parent": "fcyball:root",
-	"rewards": {
-		"function": "fcyball:balloon/controls/cooldown"
-	}
-}
+{"criteria":{"cooldown":{"trigger": "minecraft:tick"}},"rewards":{"function": "fcyball:balloon/controls/cooldown"}}

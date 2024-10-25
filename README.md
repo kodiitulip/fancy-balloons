@@ -9,19 +9,34 @@ Here is the balloon recipe:<br/>
 
 ## Usage
 
-when you plop down the balloon you will receive 5 items, these items are controllers
+When you place down a balloon you will receive 5 items, these items are controllers
 
--   Balloon Control: when used will toggle between locked rotation or following player
--   Balloon Speed Up/Down: when used will increase/decrease the horizontal speed of the balloon
--   Balloon Ascend/Descend: when used will increase/decrease the vertical speed of the balloon
+### Balloon Control
 
-> Do have in mind that the balloons only work if there is a player seated on them. <br />
-> you can only seat on a balloon with empty hands. <br />
-> They will not move if empty
+![control](/readme-assets/control.png)
+
+### Balloon Speed +1
+
+![speed up](/readme-assets/speedup.png)
+
+### Balloon Speed -1
+
+![speed down](/readme-assets/speeddown.png)
+
+### Balloon Control
+
+![ascend](/readme-assets/ascend.png)
+
+### Balloon Control
+
+![descend](/readme-assets/descend.png)
+
+> Do have in mind that the balloons, and control items, only work if there is a player seated on said balloon.
+> They will not move, or change speed, if empty.
 
 ## Model Update!
 
-Now if you interact with the balloons with dyes in hand they will be colored
+As of v0.0.8 and up if you interact with the balloons with dyes in hand, they will be colored
 
 ### Available colors are:
 
@@ -36,7 +51,7 @@ Now if you interact with the balloons with dyes in hand they will be colored
 
 ### New Item Model
 
-The spawner item for the balloon no longer looks like a bat spawn egg!<br/>
+The item model for the balloon spawner!<br/>
 ![item](/readme-assets/icon.png)
 
 > NOTES!
