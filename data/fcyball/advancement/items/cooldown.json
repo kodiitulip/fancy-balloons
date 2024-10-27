@@ -1,1 +1,0 @@
-{"criteria":{"cooldown":{"trigger": "minecraft:tick"}},"rewards":{"function": "fcyball:balloon/controls/cooldown"}}

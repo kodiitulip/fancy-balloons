@@ -1,1 +1,0 @@
-{"criteria":{"speed_up":{"trigger": "minecraft:using_item","conditions":{"item":{"predicates":{"minecraft:custom_data":{"fcyball":{"type": "ball_height_ctrl","variant": "down"}}}}}}},"rewards":{"function": "fcyball:balloon/controls/height_down"}}

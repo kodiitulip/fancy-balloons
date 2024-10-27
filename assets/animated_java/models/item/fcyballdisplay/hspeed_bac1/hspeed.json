@@ -1,6 +1,0 @@
-{
-	"parent": "animated_java:item/fcyballdisplay/default/hspeed",
-	"textures": {
-		"11": "animated_java:item/fcyballdisplay/h_speed_bac1"
-	}
-}

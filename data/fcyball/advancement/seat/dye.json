@@ -1,1 +1,0 @@
-{"criteria":{"seat":{"trigger": "minecraft:player_interacted_with_entity","conditions":{"entity": [{"condition": "minecraft:entity_properties","entity": "this","predicate":{"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"}}],"item":{"items": "#fcyball:dyes"}}}},"rewards":{"function": "fcyball:balloon/dye"}}

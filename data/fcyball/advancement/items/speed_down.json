@@ -1,1 +1,0 @@
-{"criteria":{"speed_up":{"trigger": "minecraft:using_item","conditions":{"item":{"predicates":{"minecraft:custom_data":{"fcyball":{"type": "ball_speed_ctrl","variant": "slow_down"}}}}}}},"rewards":{"function": "fcyball:balloon/controls/speed_down"}}

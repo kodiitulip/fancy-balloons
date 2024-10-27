@@ -1,1 +1,0 @@
-{"criteria":{"spawn":{"trigger": "minecraft:item_used_on_block","conditions":{"location": [{"condition": "minecraft:match_tool","predicate":{"predicates":{"minecraft:custom_data":{"fcyball":{"type": "ball_spawner"}}}}}]}}},"rewards":{"function": "fcyball:balloon/spawner"}}
