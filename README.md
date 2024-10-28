@@ -14,32 +14,14 @@ Here is the balloon recipe:<br/>
 
 ## Usage
 
-Using an iron nugget on a stone cutter you'll be able to craft the controller items for the balloon
+Control the balloon with WASD, Space and Ctrl!
 
-![image](/readme-assets/stonecutter.png)
+-   W/S increase or decrease the target speed of the balloon
+-   A/D rotate the balloon at 5 degrees per tick
+-   Space/Ctrl increase or decrease the target vertical speed of the balloon
+-   Sneak and Click to dye your balloons!
 
-### Balloon Control
-
-![control](/readme-assets/control.png)
-
-### Balloon Speed +1
-
-![speed up](/readme-assets/speedup.png)
-
-### Balloon Speed -1
-
-![speed down](/readme-assets/speeddown.png)
-
-### Balloon Height +1
-
-![ascend](/readme-assets/ascend.png)
-
-### Balloon Heoght -1
-
-![descend](/readme-assets/descend.png)
-
-> Do have in mind that the balloons, and control items, only work if there is a player seated on said balloon.
-> They will not move, or change speed, if empty.
+> Do have in mind that the balloons only work if there is a player seated on them.<br/>They will not move, or change speed, if empty.
 
 ## Colorful Balloons!
 
@@ -69,7 +51,6 @@ As of v0.0.8 and up if you interact with the balloons with dyes in hand, they wi
 
 > Keep in mind that if you break a balloon, it's color will reset. I still haven't found a way to change this without having an item for every color.
 
-> NOTES!
-> The datapack version file works as both a datapack and resourcepack.
-> Put the same file on both folders <br />
-> The mod version works globaly just like any other mod
+> NOTES!<br/>The datapack version file works as both a datapack and resourcepack.<br/>Put the same file on both folders<br />The mod version works globaly just like any other mod.
+
+> ALERT!<br/>The version 0.2.0-alpha is **not** compatible with the other versions since so many functions got refactored to work with the WASD system, and to improve performance.

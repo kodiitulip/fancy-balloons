@@ -1,0 +1,1 @@
+{"criteria":{"trigger":{"trigger": "minecraft:tick","conditions":{"player": [{"condition": "minecraft:reference","name": "fcyball:is_player_on_balloon"},{"condition": "minecraft:reference","name": "fcyball:is_player_input"}]}}},"rewards":{"function": "fcyball:player_input"}}

@@ -1,0 +1,1 @@
+{"criteria":{"trigger":{"trigger": "minecraft:player_hurt_entity","conditions":{"entity": [{"condition": "minecraft:entity_properties","predicate":{"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"},"entity": "this"}]}}},"rewards":{"function": "fcyball:seat/attack"}}

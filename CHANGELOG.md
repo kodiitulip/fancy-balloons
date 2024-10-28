@@ -81,3 +81,17 @@
 -   Changed the controller items to be iron nuggets, and since you use iron nuggets to craft the controllers, you can convert a controller into another!
     -   You can technically still use the old controller items, but they will no longer have the difrent texture and also wont be able to be used for crafting other controllers.
     -   BE CAREFUl! Since the item controllers are just iron ingots with custom data, minecraft will still see them as iron nuggets for recipes.
+
+# CHANGES - 27/10/2024 - 21:40 - v0.2.0-alpha
+
+## !!!ALERT!!! THIS UPDATE IS **NOT** COMPATIBLE WITH OLDER VERSIONS
+
+> please make a backup of your world or remove every single balloon in your world. <br/> You can esily remove the old versions with `/function animated_java:fcyballdisplay/remove/all` on the **old** version of the datapack<br/>The balloon spawner items have changed custom data so you'll probably need to recraft them
+
+-   1.21.2 UPDATE! No longer will you need to use controller items to controll your balloons, now you can controll them with WASD Space and Ctrl
+    -   W/S increase or decrease the target speed of the balloon
+    -   A/D rotate the balloon at 5 degrees per tick
+    -   Space/Ctrl increase or decrease the target vertical speed of the balloon
+-   Coloring the balloons now requires you to sneak and click! all available dyes have colors
+
+> This update took 2 whole days for me to finish because so many things needed to be remade or refactored

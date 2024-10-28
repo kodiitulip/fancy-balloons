@@ -1,34 +1,37 @@
 {
 	"meta": {
 		"format": "animated_java_blueprint",
-		"format_version": "1.4.2",
+		"format_version": "1.5.1",
 		"uuid": "c047abf4-1666-5b79-7ff1-79994fa24620",
-		"save_location": "/home/kodie/.local/share/PrismLauncher/instances/VanillaPerfected/minecraft/resources/common/optional/fancy-ballons/.blockbench/balloon.ajblueprint",
-		"last_used_export_namespace": "fcyballdisplay"
+		"save_location": "/home/kodie/.local/share/PrismLauncher/instances/Vanilla Upgraded/minecraft/resources/common/optional/fancy-ballons/.blockbench/balloon.ajblueprint",
+		"last_used_export_namespace": "fcyball_small_balloon"
 	},
 	"blueprint_settings": {
-		"export_namespace": "fcyballdisplay",
+		"export_namespace": "fcyball_small_balloon",
 		"show_bounding_box": false,
 		"auto_bounding_box": true,
 		"bounding_box": [48, 48],
 		"enable_plugin_mode": false,
 		"resource_pack_export_mode": "raw",
 		"data_pack_export_mode": "raw",
+		"target_minecraft_version": "1.21.2",
 		"display_item": "minecraft:white_dye",
 		"custom_model_data_offset": 0,
 		"enable_advanced_resource_pack_settings": false,
 		"enable_advanced_resource_pack_folders": false,
-		"resource_pack": "/home/kodie/.local/share/PrismLauncher/instances/VanillaPerfected/minecraft/resources/common/optional/fancy-ballons",
+		"resource_pack": "/home/kodie/.local/share/PrismLauncher/instances/Vanilla Upgraded/minecraft/resources/common/optional/fancy-ballons",
 		"display_item_path": "",
 		"model_folder": "",
 		"texture_folder": "",
 		"enable_advanced_data_pack_settings": false,
-		"data_pack": "/home/kodie/.local/share/PrismLauncher/instances/VanillaPerfected/minecraft/resources/common/optional/fancy-ballons",
-		"summon_commands": "",
-		"ticking_commands": "",
+		"data_pack": "/home/kodie/.local/share/PrismLauncher/instances/Vanilla Upgraded/minecraft/resources/common/optional/fancy-ballons",
+		"summon_commands": "tag @s add fcyball.balloon\ntag @s add fcyball.balloon.small\nexecute summon minecraft:item_display run {\ntag @s add fcyball.balloon.seat\nexecute summon minecraft:interaction run {\ntag @s add fcyball.seat.interaction\ndata merge entity @s {width:1.6f,height:0.6f,response:true}\nride @s mount @n[tag=fcyball.balloon.seat]\n}\nride @s mount @n[tag=fcyball.balloon]\n}",
+		"ticking_commands": "execute unless entity @p[distance=..20] run function animated_java:fcyball_small_balloon/animations/pause_all\nexecute if entity @p[distance=..15] run function animated_java:fcyball_small_balloon/animations/sway/resume",
 		"interpolation_duration": 1,
 		"teleportation_duration": 1,
 		"use_storage_for_animation": false,
+		"show_function_errors": true,
+		"show_outdated_warning": true,
 		"baked_animations": true,
 		"json_file": ""
 	},
@@ -908,7 +911,7 @@
 							"uuid": "c52d01be-2cb6-7ae1-5c10-fa1053b83ef9",
 							"export": true,
 							"mirror_uv": false,
-							"isOpen": true,
+							"isOpen": false,
 							"locked": false,
 							"visibility": true,
 							"autouv": 0,
@@ -924,7 +927,7 @@
 							"uuid": "3c58b3dd-608d-adc2-574c-d6355173dda7",
 							"export": true,
 							"mirror_uv": false,
-							"isOpen": true,
+							"isOpen": false,
 							"locked": false,
 							"visibility": true,
 							"autouv": 0,
@@ -1691,7 +1694,7 @@
 		"default": {
 			"name": "default",
 			"display_name": "Default",
-			"uuid": "23258465-8f35-72b2-e12a-736d65ae77d6",
+			"uuid": "e04ac01a-a284-7293-1899-4ddb9addd3ca",
 			"texture_map": {},
 			"excluded_nodes": [],
 			"is_default": true
@@ -2074,7 +2077,13 @@
 			"blend_weight": "",
 			"start_delay": "",
 			"loop_delay": "0",
-			"excluded_nodes": [],
+			"excluded_nodes": [
+				{
+					"icon": "anchor",
+					"name": "seat_locator",
+					"value": "7d174d2a-9ab4-66a7-d0e6-855b0dfd0b13"
+				}
+			],
 			"animators": {
 				"5129be7c-fb15-596a-8770-0487dba3a51f": {
 					"name": "root",

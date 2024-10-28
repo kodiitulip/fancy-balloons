@@ -1,0 +1,6 @@
+{
+	"parent": "animated_java:item/fcyball_small_balloon/default/hspeed",
+	"textures": {
+		"11": "animated_java:item/fcyball_small_balloon/h_speed_fow2"
+	}
+}

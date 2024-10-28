@@ -1,0 +1,656 @@
+advancement pack {
+	"display": {
+		"title": "Fancy Ballons",
+		"description": "",
+		"icon": {
+			"id": "minecraft:white_wool",
+			"components": {
+				"minecraft:item_model": "fcyball:balloon"
+			}
+		},
+		"show_toast": false,
+		"announce_to_chat": false
+	},
+	"parent": "tiskodie:root",
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:tick"
+		}
+	}
+}
+
+advancement small_balloon_summon {
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:item_used_on_block",
+			"conditions": {
+				"location": [
+					{
+						"condition": "minecraft:match_tool",
+						"predicate": {
+							"predicates": {
+								"minecraft:custom_data": {
+									"fcyball": {
+										"id": "small_balloon_spawner"
+									}
+								}
+							}
+						}
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "fcyball:small_balloon/summon"
+	}
+}
+
+advancement balloon_seat_dye {
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"predicate": {
+							"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"
+						},
+						"entity": "this"
+					}
+				],
+				"player": {
+					"flags": {
+						"is_sneaking": true
+					},
+					"slots": {
+						"weapon.*": {
+							"items": "#fcyball:dyes"
+						}
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "fcyball:seat/dye"
+	}
+}
+
+advancement balloon_seat_interact {
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:player_interacted_with_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"predicate": {
+							"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"
+						},
+						"entity": "this"
+					}
+				],
+				"player": {
+					"flags": {
+						"is_sneaking": false
+					}
+				}
+			}
+		}
+	},
+	"rewards": {
+		"function": "fcyball:seat/interact"
+	}
+}
+
+advancement balloon_seat_attack {
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:player_hurt_entity",
+			"conditions": {
+				"entity": [
+					{
+						"condition": "minecraft:entity_properties",
+						"predicate": {
+							"nbt": "{Tags:[\"fcyball.seat.interaction\"]}"
+						},
+						"entity": "this"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "fcyball:seat/attack"
+	}
+}
+
+advancement player_input {
+	"criteria": {
+		"trigger": {
+			"trigger": "minecraft:tick",
+			"conditions": {
+				"player": [
+					{
+						"condition": "minecraft:reference",
+						"name": "fcyball:is_player_on_balloon"
+					},
+					{
+						"condition": "minecraft:reference",
+						"name": "fcyball:is_player_input"
+					}
+				]
+			}
+		}
+	},
+	"rewards": {
+		"function": "fcyball:player_input"
+	}
+}
+
+advancement player_input_cooldown {
+	"criteria": {
+		"tick": {
+			"trigger": "minecraft:tick"
+		}
+	},
+	"rewards": {
+		"function": "fcyball:input_cooldown"
+	}
+}
+
+loot_table small_balloon_spawner {
+	"type": "minecraft:command",
+	"pools": [
+		{
+			"rolls": 1,
+			"entries": [
+				{
+					"type": "minecraft:item",
+					"name": "minecraft:bat_spawn_egg",
+					"functions": [
+						{
+							"function": "minecraft:set_components",
+							"components": {
+								"minecraft:item_model": "fcyball:balloon",
+								"minecraft:item_name": "\"Small Balloon\"",
+								"minecraft:custom_data": {
+									"fcyball": {
+										"id": "small_balloon_spawner"
+									}
+								},
+								"minecraft:entity_data": {
+									"id": "minecraft:marker",
+									"Tags": ["fcyball.balloon.spawner"]
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	]
+}
+
+recipe small_balloon_spawner {
+	"type": "minecraft:crafting_shaped",
+	"pattern": [" W ", " L ", "PIP"],
+	"key": {
+		"W": "#minecraft:wool",
+		"L": "minecraft:lead",
+		"I": "minecraft:iron_ingot",
+		"P": "#minecraft:planks"
+	},
+	"category": "misc",
+	"show_notification": true,
+	"result": {
+		"id": "minecraft:bat_spawn_egg",
+		"components": {
+			"minecraft:item_model": "fcyball:balloon",
+			"minecraft:item_name": "\"Small Balloon\"",
+			"minecraft:custom_data": {
+				"fcyball": {
+					"id": "small_balloon_spawner"
+				}
+			},
+			"minecraft:entity_data": {
+				"id": "minecraft:marker",
+				"Tags": ["fcyball.balloon.spawner"]
+			}
+		}
+	}
+}
+
+predicate is_player_input {
+	"condition": "minecraft:all_of",
+	"terms": [
+		{
+			"condition": "minecraft:any_of",
+			"terms": [
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"backward": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"forward": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"jump": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"left": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"right": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"sprint": true
+							}
+						}
+					}
+				},
+				{
+					"condition": "minecraft:entity_properties",
+					"entity": "this",
+					"predicate": {
+						"type_specific": {
+							"type": "minecraft:player",
+							"input": {
+								"sneak": true
+							}
+						}
+					}
+				}
+			]
+		}
+	]
+}
+
+predicate player_forward {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"forward": true
+			}
+		}
+	}
+}
+
+predicate player_backward {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"backward": true
+			}
+		}
+	}
+}
+
+predicate player_left {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"left": true
+			}
+		}
+	}
+}
+
+predicate player_right {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"right": true
+			}
+		}
+	}
+}
+
+predicate player_jump {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"jump": true
+			}
+		}
+	}
+}
+
+predicate player_sprint {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"sprint": true
+			}
+		}
+	}
+}
+
+predicate player_shift {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"type_specific": {
+			"type": "minecraft:player",
+			"input": {
+				"sneak": true
+			}
+		}
+	}
+}
+
+predicate is_player_on_balloon {
+	"condition": "minecraft:entity_properties",
+	"entity": "this",
+	"predicate": {
+		"vehicle": {
+			"nbt": "{Tags:[\"fcyball.balloon.seat\"]}"
+		}
+	}
+}
+
+function load {
+	scoreboard objectives add mcb.internal dummy
+
+	scoreboard objectives add fcyball.hspeed dummy
+	scoreboard objectives add fcyball.vspeed dummy
+	scoreboard objectives add fcyball.hspeed.tgt dummy
+	scoreboard objectives add fcyball.vspeed.tgt dummy
+	scoreboard objectives add fcyball.cooldown.input dummy
+	
+	# Debug for /reload
+	title TisKodie actionbar ["",{"text":"[fcyball]", "color": "#1b9e2e" }," has loaded!"]
+}
+
+function tick {
+	execute as @a if predicate fcyball:is_player_on_balloon at @s as @n[type=item_display,tag=fcyball.balloon] run function #fcyball:balloon_tick
+}
+
+function input_cooldown {
+	execute if entity @s[advancements={fcyball:player_input=false}] run return 0
+	scoreboard players remove @s fcyball.cooldown.input 1
+	execute if score @s fcyball.cooldown.input matches 1.. run return run advancement revoke @s only fcyball:player_input_cooldown
+	scoreboard players reset @s fcyball.cooldown.input
+	advancement revoke @s only fcyball:player_input
+}
+
+function player_input {
+	execute if predicate fcyball:player_forward on vehicle on vehicle run scoreboard players add @s fcyball.hspeed.tgt 10
+	execute if predicate fcyball:player_backward on vehicle on vehicle run scoreboard players remove @s fcyball.hspeed.tgt 10
+	execute if predicate fcyball:player_jump on vehicle on vehicle run scoreboard players add @s fcyball.vspeed.tgt 5
+	execute if predicate fcyball:player_sprint on vehicle on vehicle run scoreboard players remove @s fcyball.vspeed.tgt 5
+
+	advancement revoke @s only fcyball:player_input_cooldown
+	scoreboard players set @s fcyball.cooldown.input 5
+}
+
+function relative_tp {
+	$tp @s ^$(x) ^$(y) ^$(z)
+}
+
+dir small_balloon {
+	function summon {
+		advancement revoke @s only fcyball:small_balloon_summon
+
+		execute at @n[type=minecraft:marker,tag=fcyball.balloon.spawner,distance=..7] rotated as @s rotated ~ 0 align xyz positioned ~0.5 ~1.0 ~0.5 unless entity @e[type=item_display,tag=aj.fcyball_small_balloon,distance=..2] run {
+			function animated_java:fcyball_small_balloon/summon {args:{animation:"sway",start_animation:true}}
+		}
+
+		kill @n[type=minecraft:marker,tag=fcyball.balloon.spawner,distance=..7]
+	}
+	function tick {
+		execute if entity @s[tag=!fcyball.balloon.small] run return fail
+		block controls {
+			scoreboard players add @s fcyball.hspeed 0
+			scoreboard players add @s fcyball.vspeed 0
+
+			execute on passengers if entity @s[tag=fcyball.balloon.seat] on passengers if entity @s[type=player] run {
+				execute if predicate fcyball:player_left on vehicle on vehicle at @s run rotate @s ~-5 0
+				execute if predicate fcyball:player_right on vehicle on vehicle at @s run rotate @s ~5 0
+			}
+
+			execute if score @s fcyball.hspeed.tgt matches 20.. run scoreboard players set @s fcyball.hspeed.tgt 20
+			execute if score @s fcyball.hspeed.tgt matches ..-20 run scoreboard players set @s fcyball.hspeed.tgt -20
+			execute if score @s fcyball.vspeed.tgt matches 10.. run scoreboard players set @s fcyball.vspeed.tgt 10
+			execute if score @s fcyball.vspeed.tgt matches ..-10 run scoreboard players set @s fcyball.vspeed.tgt -10
+
+			execute if score @s fcyball.hspeed > @s fcyball.hspeed.tgt run scoreboard players remove @s fcyball.hspeed 1
+			execute if score @s fcyball.hspeed < @s fcyball.hspeed.tgt run scoreboard players add @s fcyball.hspeed 1
+			execute if score @s fcyball.vspeed > @s fcyball.vspeed.tgt run scoreboard players remove @s fcyball.vspeed 1
+			execute if score @s fcyball.vspeed < @s fcyball.vspeed.tgt run scoreboard players add @s fcyball.vspeed 1
+		}
+
+		execute as @s at @s run function ./move
+
+		scoreboard players operation #text fcyball.vspeed = @s fcyball.vspeed 
+		scoreboard players operation #text fcyball.hspeed = @s fcyball.hspeed 
+
+		execute on passengers if entity @s[tag=fcyball.balloon.seat] on passengers if entity @s[type=player] run title @s actionbar ["hspeed: ",{"score":{"name":"#text","objective":"fcyball.hspeed"}}," vspeed: ", {"score":{"name":"#text","objective":"fcyball.vspeed"}}]
+
+		scoreboard players reset #text fcyball.vspeed
+	}
+	function move {
+		execute if score @s fcyball.hspeed matches 1..10 unless block ^ ^ ^3 #minecraft:air run scoreboard players set @s fcyball.hspeed.tgt 0
+		execute if score @s fcyball.hspeed matches -10..-1 unless block ^ ^ ^-3 #minecraft:air run scoreboard players set @s fcyball.hspeed.tgt 0
+		execute if score @s fcyball.hspeed matches 11.. unless block ^ ^ ^6 #minecraft:air run scoreboard players set @s fcyball.hspeed.tgt 0
+		execute if score @s fcyball.hspeed matches ..-11 unless block ^ ^ ^-6.5 #minecraft:air run scoreboard players set @s fcyball.hspeed.tgt 0
+
+		execute if score @s fcyball.vspeed matches 1..5 unless block ^ ^5.3 ^ #minecraft:air run scoreboard players set @s fcyball.vspeed.tgt 0
+		execute if score @s fcyball.vspeed matches 6.. unless block ^ ^6.1 ^ #minecraft:air run scoreboard players set @s fcyball.vspeed.tgt 0
+		execute if score @s fcyball.vspeed matches ..-6 unless block ^ ^-2.1 ^ #minecraft:air run scoreboard players set @s fcyball.vspeed.tgt 0
+		execute if score @s fcyball.vspeed matches -5..-1 unless block ^ ^-1.2 ^ #minecraft:air run scoreboard players set @s fcyball.vspeed.tgt 0
+
+		data modify storage fcyball:temp pos.x set value 0.0f
+		execute store result storage fcyball:temp pos.z float 0.02 run scoreboard players get @s fcyball.hspeed
+		execute store result storage fcyball:temp pos.y float 0.02 run scoreboard players get @s fcyball.vspeed
+
+		function fcyball:relative_tp with storage fcyball:temp pos
+
+		data remove storage fcyball:temp pos
+
+		execute if score @s fcyball.hspeed matches 0 run function animated_java:fcyball_small_balloon/variants/hspeed_stop/apply
+		execute if score @s fcyball.vspeed matches 0 run function animated_java:fcyball_small_balloon/variants/vspeed_stop/apply
+		execute if score @s fcyball.hspeed matches 1..10 run function animated_java:fcyball_small_balloon/variants/hspeed_fow1/apply
+		execute if score @s fcyball.hspeed matches 11..20 run function animated_java:fcyball_small_balloon/variants/hspeed_fow2/apply
+		execute if score @s fcyball.hspeed matches -10..-1 run function animated_java:fcyball_small_balloon/variants/hspeed_bac1/apply
+		execute if score @s fcyball.hspeed matches -20..-11 run function animated_java:fcyball_small_balloon/variants/hspeed_bac2/apply
+		execute if score @s fcyball.vspeed matches 1..20 run function animated_java:fcyball_small_balloon/variants/vspeed_up/apply
+		execute if score @s fcyball.vspeed matches -20..-1 run function animated_java:fcyball_small_balloon/variants/vspeed_down/apply
+	}
+}
+
+dir seat {
+	function interact {
+		advancement revoke @s only fcyball:balloon_seat_interact
+
+		tag @s add fcyball.interactor
+
+		execute as @e[type=interaction,distance=..6,tag=fcyball.seat.interaction,sort=nearest] at @s run {
+			execute unless data entity @s interaction run return run data remove entity @s interaction
+
+			execute on target if entity @s[tag=fcyball.interactor] run ride @s mount @n[type=item_display,tag=fcyball.balloon.seat,distance=..0.5]
+
+			execute as @n[type=item_display,tag=fcyball.balloon.seat,distance=..0.5] on vehicle run function animated_java:fcyball_small_balloon/animations/sway/play
+
+			data remove entity @s interaction
+		}
+
+		tag @s remove fcyball.interactor
+	}
+	function attack {
+		advancement revoke @s only fcyball:balloon_seat_attack
+
+		tag @s add fcyball.attacker
+
+		execute as @e[type=interaction,distance=..6,tag=fcyball.seat.interaction,sort=nearest] at @s run {
+			execute unless data entity @s attack run return run data remove entity @s attack
+			execute on attacker unless entity @s[tag=fcyball.attacker] run return run data remove entity @s attack
+
+			execute on attacker if entity @s[gamemode=!creative] if entity @s[tag=aj.fcyball_small_balloon.root] run loot spawn ~ ~ ~ loot fcyball:small_balloon_spawner
+
+			execute as @n[type=item_display,tag=fcyball.balloon] if entity @s[tag=aj.fcyball_small_balloon.root] run function animated_java:fcyball_small_balloon/remove/this
+
+			data remove entity @s attack
+
+			execute if entity @s run kill
+		}
+
+		tag @s remove fcyball.attacker
+	}
+	function dye {
+		advancement revoke @s only fcyball:balloon_seat_dye
+
+		tag @s add fcyball.interactor
+
+		execute as @e[type=interaction,distance=..6,tag=fcyball.seat.interaction,sort=nearest] at @s run {
+			execute unless data entity @s interaction run return run data remove entity @s interaction
+			execute on target unless entity @s[tag=fcyball.interactor] run return run data remove entity @s interaction
+
+			<%%
+			const dyes = [
+				"minecraft:water_bucket",
+				"minecraft:white_dye",
+				"minecraft:red_dye",
+				"minecraft:blue_dye",
+				"minecraft:cyan_dye",
+				"minecraft:gray_dye",
+				"minecraft:lime_dye",
+				"minecraft:pink_dye",
+				"minecraft:black_dye",
+				"minecraft:brown_dye",
+				"minecraft:green_dye",
+				"minecraft:orange_dye",
+				"minecraft:purple_dye",
+				"minecraft:yellow_dye",
+				"minecraft:magenta_dye",
+				"minecraft:light_blue_dye",
+				"minecraft:light_gray_dye",
+			];
+			const colors = [
+				"default",
+				"white",
+				"red",
+				"blue",
+				"cyan",
+				"gray",
+				"lime",
+				"pink",
+				"black",
+				"brown",
+				"green",
+				"orange",
+				"purple",
+				"yellow",
+				"magenta",
+				"light_blue",
+				"light_gray",
+			];
+
+			dyes.forEach((dye, index) => {
+				emit(`execute on target if items entity @s weapon.* ${dye} run scoreboard players set #color fcyball.cooldown.input ${index}`);
+			});
+			colors.forEach((color, index) => {
+				emit(`execute if score #color fcyball.cooldown.input matches ${index} as @n[type=item_display,tag=fcyball.balloon] run function animated_java:fcyball_small_balloon/variants/${color}/apply`);
+			});
+			%%>
+
+			data remove entity @s interaction
+		}
+
+		tag @s remove fcyball.interactor
+	}
+}
+
+tag function balloon_tick {
+	fcyball:small_balloon/tick
+}
+
+tag item dyes {
+	minecraft:water_bucket
+	minecraft:white_dye
+	minecraft:red_dye
+	minecraft:blue_dye
+	minecraft:cyan_dye
+	minecraft:gray_dye
+	minecraft:lime_dye
+	minecraft:pink_dye
+	minecraft:black_dye
+	minecraft:brown_dye
+	minecraft:green_dye
+	minecraft:orange_dye
+	minecraft:purple_dye
+	minecraft:yellow_dye
+	minecraft:magenta_dye
+	minecraft:light_blue_dye
+	minecraft:light_gray_dye	
+}
