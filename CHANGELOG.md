@@ -95,3 +95,13 @@
 -   Coloring the balloons now requires you to sneak and click! all available dyes have colors
 
 > This update took 2 whole days for me to finish because so many things needed to be remade or refactored
+
+# CHANGES - 27/10/2024 - 21:40 - v0.2.1-alpha
+
+Hello! I have been on hiatus thanks to lack of motivation sooooo...
+
+little hotfix for an issue reported on the github repo
+
+-   Balloons now should drop their item when hitted.
+
+> If I gain some free time and motivation again i migth add some new content
