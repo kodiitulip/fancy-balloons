@@ -1,9 +1,10 @@
 {
+	"format_version": "1.9.0",
 	"credit": "Made with Blockbench",
 	"texture_size": [128, 128],
 	"textures": {
-		"0": "animated_java:item/fcyball_small_balloon/balloon",
-		"particle": "animated_java:item/fcyball_small_balloon/balloon"
+		"0": "animated_java:blueprint/fcyball_small_balloon/balloon",
+		"particle": "animated_java:blueprint/fcyball_small_balloon/balloon"
 	},
 	"elements": [
 		{
